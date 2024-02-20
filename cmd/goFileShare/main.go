@@ -1,6 +1,10 @@
 package main
 
+import (
+	"goFileShare/internal/app"
+)
+
 func main() {
-	r := setupRouter()
+	r := app.SetupRouter()
 	r.Run(":8080")
 }

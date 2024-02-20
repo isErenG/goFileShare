@@ -1,13 +1,25 @@
 package app
 
 import (
+	"fmt"
 	"github.com/gin-gonic/gin"
 )
 
-var db = make(map[string]string)
+func SetupRouter() *gin.Engine {
+	//gin.SetMode(gin.ReleaseMode)
+	r := gin.Default()
 
-func setupRouter() *gin.Engine {
+	r.POST("/upload", uploadFile)
+
+	r.GET("/download", downloadFile)
 
 	return r
+}
 
+func uploadFile(c *gin.Context) {
+	fmt.Println("Test")
+}
+
+func downloadFile(c *gin.Context) {
+	fmt.Println("Test")
 }
