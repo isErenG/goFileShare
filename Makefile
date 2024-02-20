@@ -1,5 +1,6 @@
 build:
-	@go build -o bin/goFileShare
+	@go build -o bin/goFileShare ./cmd/goFileShare
+
 
 run: build
 	@./bin/goFileShare
